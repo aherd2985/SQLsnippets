@@ -1,0 +1,1 @@
+EXEC [LinkedServer].[db Name].dbo.sp_helptext 'SCHEMA.ProcedureName'
