@@ -37,7 +37,7 @@ BEGIN
 			;  
 
 		EXEC msdb.dbo.sp_send_dbmail 
-			@profile_name = 'Admin',
+			@profile_name = 'profileName',
 			@recipients='somebody@email.com',  
 			@subject = 'Something Inseted',  
 			@body = @HTML,  
