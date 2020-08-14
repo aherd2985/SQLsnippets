@@ -28,5 +28,5 @@ CROSS APPLY (
     FROM sys.dm_exec_sql_text(sdec.most_recent_sql_handle)
     ) sdest
 where sdes.session_id <> @@SPID 
-and sdes.nt_user_name = 'JasonB' -- Put the username here !
+and sdes.nt_user_name = 'userName' -- Put the username here !
 ORDER BY sdec.session_id
