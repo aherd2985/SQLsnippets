@@ -35,4 +35,4 @@ INNER JOIN dbo.[Subscriptions] S ON c.ItemID = S.Report_OID
 INNER JOIN dbo.ReportSchedule R ON S.SubscriptionID = R.SubscriptionID
 INNER JOIN msdb.dbo.sysjobs J ON Convert(nvarchar(128),R.ScheduleID) = J.name
 INNER JOIN msdb.dbo.sysjobschedules JS ON J.job_id = JS.job_id
-ORDER LastRunTime DESC
+ORDER BY LastRunTime DESC
