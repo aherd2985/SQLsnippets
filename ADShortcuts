@@ -1,0 +1,22 @@
+Command Prompt
+net user USERNAME /domain
+net group <your_groupname> /domain
+net localgroup <your_groupname> /domain
+whoami /groups
+gpresult /R 
+gpresult /V
+squery group -samid "Group_SAM_Account_Name" | dsget group -members -expand
+dsquery group -name "Group Account Name" | dsget group -members -expand
+
+
+
+
+
+PowerShell
+Import-Module ActiveDirectory
+Get-ADGroupMember -Identity AllowUSB -Recursive | ft name
+Get-ADGroupMember "Domain Admins" -recursive | Select-Object name
+Get-ADGroupMember -Identity AllowUSB | foreach { Get-ADUser $_ -Properties * }
+Get-ADPrincipalGroupMembership jbrion | Select name
+Get-ADUser jbrion -Properties Memberof | Select -ExpandProperty memberOf
+Get-ADPrincipalGroupMembership jbrion | where {$_ -like "*allow*"} | Sort-Object | select -ExpandProperty name
