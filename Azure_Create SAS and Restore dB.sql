@@ -7,6 +7,6 @@ CREATE CREDENTIAL [https://{AZURE STORAGE}.blob.core.windows.net/{AZURE CONTAINE
 RESTORE DATABASE KP   
    FROM URL = 'https://{AZURE STORAGE}.blob.core.windows.net/sassycontainer/[dB NAME].bak'   
    WITH  
-      MOVE '[dB NAME]_data' to 'https://{AZURE STORAGE}.blob.core.windows.net/sassycontainer/[dB NAME].mdf'  
-     ,MOVE '[dB NAME]_log' to 'https://{AZURE STORAGE}.blob.core.windows.net/sassycontainer/[dB NAME].ldf'  
+      MOVE '[dB NAME]_data' to 'https://{AZURE STORAGE}.blob.core.windows.net/{AZURE CONTAINER}/[dB NAME].mdf'  
+     ,MOVE '[dB NAME]_log' to 'https://{AZURE STORAGE}.blob.core.windows.net/{AZURE CONTAINER}/[dB NAME].ldf'  
 , REPLACE  
