@@ -7,8 +7,9 @@ gpresult /R
 gpresult /V
 squery group -samid "Group_SAM_Account_Name" | dsget group -members -expand
 dsquery group -name "Group Account Name" | dsget group -members -expand
-
-
+net group groupname /add
+net group groupName userName /ADD /DOMAIN
+net group groupName 
 
 
 
