@@ -11,3 +11,6 @@ GRANT EXECUTE TO db_executor
 USE [dB_Name]
 GO
 GRANT EXECUTE TO [user]
+
+
+GRANT EXECUTE ON SCHEMA ::dbo TO [MyDomain\MyUser]
