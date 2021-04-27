@@ -14,3 +14,7 @@ BEGIN
 
       FETCH NEXT FROM db_cursor INTO @name 
 END
+
+CLOSE db_cursor;
+
+DEALLOCATE db_cursor;
