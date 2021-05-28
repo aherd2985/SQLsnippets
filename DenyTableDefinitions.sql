@@ -1,7 +1,7 @@
 SELECT
       ObjectType = o.type_desc
     , ObjectName = o.name
-    , GrantStatement = N'DENY VIEW DEFINITION ON ' + QUOTENAME(s.name) + '.' + QUOTENAME(o.name) + N' TO [appUser];'
+    , GrantStatement = N'DENY VIEW DEFINITION ON ' + QUOTENAME(s.name) + '.' + QUOTENAME(o.name) + N' TO [User];'
 	, o.type
 FROM sys.objects o
 inner join sys.schemas s on o.schema_id = s.schema_id
